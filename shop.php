@@ -33,13 +33,27 @@
         width: 50%;
     }
 
+
+    nav a {
+        margin-left: 60px;
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: black;
+    }
  
 
     </style>
 </head>
 <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="card.php">MyCard</a>
+    </nav>
     <center>
-        <h3> Admin control panel </h3>
+        <h3>All available products </h3>
     </center>
 
     <?php
@@ -55,9 +69,8 @@
         <div class='card-body'>
             <h5 class='card-title'>$row[name]</h5>
             <p class='card-text'>$row[price]</p>
-            <a  href='update.php? id=$row[id]' class='btn btn-primary'>upd product</a>
-            <a  href='delete.php? id=$row[id]' class='btn btn-danger'>del product</a>
-        </div>
+            <a href='val.php?id=$row[id]' class='btn btn-success'>Add product to cart</a>
+            </div>
     </div>
     </main>
 
